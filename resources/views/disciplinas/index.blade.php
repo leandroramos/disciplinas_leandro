@@ -5,8 +5,15 @@
     <title>Disciplinas</title>
 </head>
 <body>
+    <a href="disciplinas/create">Criar uma nova disciplina</a>
+    <ul>
     @foreach($disciplinas as $disciplina)
-        <h1> {{ $disciplina->titulo }} </h1>
+        <li>
+            <a href="/disciplinas/{{ $disciplina->id }}">
+                {{ $disciplina->titulo }}
+            </a>
+        </li>
     @endforeach
+    </ul>
 </body>
 </html>
