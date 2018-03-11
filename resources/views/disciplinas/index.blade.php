@@ -8,7 +8,11 @@
     <a href="disciplinas/create">Criar uma nova disciplina</a>
     <ul>
     @foreach($disciplinas as $disciplina)
-        <li> {{ $disciplina->titulo }} </li>
+        <li>
+            <a href="/disciplinas/{{ $disciplina->id }}">
+                {{ $disciplina->titulo }}
+            </a>
+        </li>
     @endforeach
     </ul>
 </body>
